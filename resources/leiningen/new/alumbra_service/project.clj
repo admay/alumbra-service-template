@@ -8,7 +8,7 @@
                  [org.clojure/java.jdbc "0.7.0"]
 
                  [alumbra "0.2.6"]
-                 [environ.core "1.1.0"]]
+                 [environ "1.1.0"]]
 
   :plugins [[lein-environ "1.1.0"]]
 
