@@ -1,0 +1,2 @@
+(ns {{name}}.server)
+
