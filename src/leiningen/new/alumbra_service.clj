@@ -18,6 +18,7 @@
              [".gitignore" (render ".gitignore" data)]
 
              ;; src
+             ["src/{{sanitized}}/core.clj" (render "core.clj" data)]
              ["src/{{sanitized}}/database.clj" (render "database.clj" data)]
              ["src/{{sanitized}}/resolvables.clj" (render "resolvables.clj" data)]
              ["src/{{sanitized}}/root.clj" (render "root.clj" data)]
