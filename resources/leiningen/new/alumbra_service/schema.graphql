@@ -1,0 +1,39 @@
+schema {
+  query: QueryRoot
+  mutation: MutationRoot
+}
+
+type QueryRoot {
+  person (id: Int) : Person,
+  property (id: Int) : Property,
+  properties (owner: Int) : [Properties!]
+}
+
+type MutationRoot {
+  person (data: PersonInput) : Person,
+  property (data: PropertyInput) : Property
+}
+
+type Person {
+  id Int,
+  firstName String,
+  lastName String
+}
+
+type Property {
+  id Int,
+  owner Person,
+  address String,
+  size Float
+}
+
+input PersonInput {
+  firstName String,
+  lastName String
+}
+
+input PropertyInput {
+  ownerId Int,
+  address String,
+  size Float
+}
