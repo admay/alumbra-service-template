@@ -14,7 +14,6 @@
              ;; root
              ["README.md" (render "README.md" data)]
              ["project.clj" (render "project.clj" data)]
-             ["profiles.clj" (render "profiles.clj" data)]
              [".gitignore" (render ".gitignore" data)]
 
              ;; src
