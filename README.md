@@ -24,6 +24,12 @@ This project was started for me but I want it to evolve into something for anyon
 
 ## Plans
 
+First and foremost, I'm going to add test cases and some way to run them easily.
+
+After that, my focus is going to be on making this more flexible for other people to use.
+How?
+I'm not sure yet, I'm going to need some feedback.
+
 Eventually, this project will be consumed by a more general GraphQL template.
 There is no 'holy grail' of libraries so I don't want to lock people into one.
 I am currently working on a template that gives developers options to pick either Alumbra or Lacinia.
