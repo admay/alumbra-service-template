@@ -6,7 +6,7 @@ schema {
 type QueryRoot {
   getPerson(id: Int): Person
   getProperty(id: Int): Property
-  getProperties(owner: Int): [Properties!]
+  getProperties(owner: Int): [Property!]
 }
 
 type MutationRoot {
