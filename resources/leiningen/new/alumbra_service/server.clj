@@ -1,5 +1,6 @@
 (ns {{name}}.server
     (:require
+     [clojure.java.io :as io]
      [compojure.core :refer :all]
      [compojure.route :as route]
      [compojure.handler :as handler]
@@ -9,7 +10,7 @@
 
 (def graphql-handler
   (alumbra/handler
-   {:schema schema
+   {:schema (io/resource "schema.graphql")
     :query QueryRoot
     :mutation MutationRoot}))
 
