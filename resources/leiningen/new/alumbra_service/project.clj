@@ -8,9 +8,13 @@
                  [org.clojure/java.jdbc "0.7.0"]
 
                  [alumbra "0.2.6"]
+                 [alumbra/web "0.1.0-SNAPSHOT"]
                  [environ "1.1.0"]]
 
-  :plugins [[lein-environ "1.1.0"]]
+  :plugins [[lein-environ "1.1.0"]
+            [lein-ring "0.12.0"]]
+
+  :ring {:handler {{name}}.server/app}
 
   :main ^:skip-aot {{name}}.core
   :source-paths ["src"]
