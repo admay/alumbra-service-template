@@ -30,6 +30,9 @@ After that, my focus is going to be on making this more flexible for other peopl
 How?
 I'm not sure yet, I'm going to need some feedback.
 
+I'm also going to have to fix the whole versioning thing...
+Yeah, I screwed that one up...
+
 Eventually, this project will be consumed by a more general GraphQL template.
 There is no 'holy grail' of libraries so I don't want to lock people into one.
 I am currently working on a template that gives developers options to pick either Alumbra or Lacinia.
