@@ -1,5 +1,5 @@
 (ns {{name}}.root
-    (:require {{name}}.resolvables :as r))
+    (:require [{{name}}.resolvables :as r]))
 
 (def QueryRoot
   {:person (r/->Person)
