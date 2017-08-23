@@ -1,4 +1,4 @@
-(defproject alumbra-service/lein-template "0.2.0"
+(defproject alumbra-service/lein-template "0.2.1"
   :description "A Lein template to build GraphQL services"
   :url ""
   :license {:name "Eclipse Public License"
