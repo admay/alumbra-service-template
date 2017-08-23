@@ -28,5 +28,7 @@
              ;; test
 
              ;; resources
+             ["resources/schema.graphql" (render "schema.graphql" data)]
+             ["resources/schema.sql" (render "schema.sql" data)]
 
              )))
