@@ -8,6 +8,15 @@ To use the template run `lein new alumbra-service <project name>`.
 
 Information on how to use the project can be found in the generated README.
 
+#### Installing from GitHub
+
+1. `git clone https://github.com/admay/alumbra-service-template.git`
+2. `cd alumbra-service-template`
+3. `lein install`
+4. `cd <parent workspace>`
+5. `lein new alumbra-service <project name>`
+6. `cd <project name>`
+
 ## Contributing
 
 If you find a bug or want to contribute, you can;
