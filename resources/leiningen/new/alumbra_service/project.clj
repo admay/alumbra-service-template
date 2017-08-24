@@ -6,9 +6,9 @@
   :dependencies [[org.clojure/clojure "1.9.0-alpha16"]
                  [org.clojure/spec.alpha "0.1.123"]
                  [org.clojure/java.jdbc "0.7.0"]
-
                  [alumbra "0.2.6"]
                  [alumbra/web "0.1.0-SNAPSHOT"]
+                 [manifold "0.1.6"]
                  [environ "1.1.0"]]
 
   :plugins [[lein-environ "1.1.0"]
