@@ -14,7 +14,7 @@ If you find a bug or want to contribute, you can;
 
 1. Create an issue. I'll check it out as soon as I can.
 2. Submit a pull request. I'll check it out as soon as I can.
-3. Complain on [r/clojure][rclj]. I'm on there a lot.
+3. Complain on [r/clojure][1]. I'm on there a lot.
 
 I don't want this to be a locked down, no one can touch this code kind of project.
 If you have no idea what you're doing but you think you can help, get in touch.
