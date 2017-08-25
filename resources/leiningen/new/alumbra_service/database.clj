@@ -1,48 +1,38 @@
 (ns {{name}}.database
     (:require
      [{{name}}.specs :refer :all]
+     [{{name}}.utils :as u]
      [clojure.spec.alpha :as s]
      [clojure.java.jdbc :as jdbc]))
 
-(defn row->person
-  [{:keys [id first_name last_name]}]
-  {:id id
-   :first-name first_name
-   :last-name last_name})
+(defn- fetch-from-db [db table id result-set-fn]
+    (jdbc/get-by-id db table id {:result-set-fn result-set-fn}))
 
-(defn row-to-property
-  [{:keys [id owner_id address size]}]
-  {:id id
-   :owner-id owner_id
-   :address address
-   :size size})
-
-(defn fetch-person-by-id
-  [db id]
-  (if-let [person (first (jdbc/query db ["select * from people where id = ?" id]))]
+(defn fetch-person [db id]
+  (if-let [person (fetch-from-db db :people id utils/row->resolvable)]
     person
     nil))
 
-(defn fetch-property-by-id
+(defn fetch-property
   [db id]
-  (if-let [property (jdbc/query db ["select * from properties where id = ?" id])]
-    (row-to-property property)
+  (if-let [property (fetch-from-db db :people id utils/row->resolvable)]
+    property
     nil))
 
-(defn fetch-properties-by-owner
+(defn fetch-properties
   [db owner-id]
-  (if-let [properties (seq (jdbc/query db ["select * from properties where owner_id = ?" owner-id]))]
-    (map row-to-property properties)
-    nil))
+    (if-let [properties (seq (jdbc/query db ["select * from properties where owner_id = ?" owner-id] {:result-set-fn row->resolvable}))]
+      properties
+      nil))
 
 (defn create-person!
   [db data]
-  (if-let [person (seq (jdbc/insert! db :people data))]
-    (row->person (first person))
+  (if-let [person (first (seq (jdbc/insert! db :people data)))]
+    person
     nil))
 
 (defn create-property!
   [db data]
-  (if-let [property (seq (jdbc/insert! db :properties data))]
-    (row-to-property (first property))
-    nil))
+  (if-let [property (first (seq (jdbc/insert! db :properties data)))]
+    property)
+  nil)
