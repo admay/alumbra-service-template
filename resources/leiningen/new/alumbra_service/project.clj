@@ -9,7 +9,8 @@
                  [alumbra "0.2.6"]
                  [alumbra/web "0.1.0-SNAPSHOT"]
                  [manifold "0.1.6"]
-                 [environ "1.1.0"]]
+                 [environ "1.1.0"]
+                 [clj-postgresql "0.7.0"]]
 
   :plugins [[lein-environ "1.1.0"]
             [lein-ring "0.12.0"]]
