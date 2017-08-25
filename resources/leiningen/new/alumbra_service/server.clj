@@ -10,7 +10,8 @@
      [{{name}}.root :refer [QueryRoot MutationRoot]]))
 
 (defn context []
-  {:db (env :database-url)})
+  (fn [request]
+    {:db (env :database-url)}))
 
 (def graphql-handler
   (alumbra/handler
