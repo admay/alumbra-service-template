@@ -4,9 +4,9 @@ schema {
 }
 
 type QueryRoot {
-  getPerson(id: Int): Person
-  getProperty(id: Int): Property
-  getProperties(owner: Int): [Property!]
+  person(id: Int): Person
+  property(id: Int): Property
+  properties(owner: Int): [Property!]
 }
 
 type MutationRoot {
