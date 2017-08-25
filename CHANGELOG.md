@@ -19,4 +19,5 @@
 
 ### 24-Aug-2017
 - Updated project readme with better instructions.
+- Added manifold as a dependency.
 
