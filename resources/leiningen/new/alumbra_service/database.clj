@@ -1,7 +1,7 @@
 (ns {{name}}.database
     (:require
      [{{name}}.specs :refer :all]
-     [{{name}}.utils :as u]
+     [{{name}}.utils :as utils]
      [clojure.spec.alpha :as s]
      [clojure.java.jdbc :as jdbc]))
 
@@ -15,15 +15,15 @@
 
 (defn fetch-property
   [db id]
-  (if-let [property (fetch-from-db db :people id utils/row->resolvable)]
-    property
+  (if-let [property (fetch-from-db db :properties id utils/row->resolvable)]
+    (assoc property :owner (fetch-person db (:owner-id property)))
     nil))
 
 (defn fetch-properties
   [db owner-id]
-    (if-let [properties (seq (jdbc/query db ["select * from properties where owner_id = ?" owner-id] {:result-set-fn row->resolvable}))]
-      properties
-      nil))
+  (if-let [properties (seq (jdbc/query db ["select * from properties where owner_id = ?" owner-id] {:result-set-fn utils/row->resolvable}))]
+    (map #(assoc % :owner (fetch-person db (:owner-id %))) properties)
+    nil))
 
 (defn create-person!
   [db data]
