@@ -1,7 +1,7 @@
 (ns {{name}}.utils
     (:require
      [clojure.walk :as walk]
-     [clojure.string :refer [replace]]))
+     [clojure.string :as string]))
 
 (defn transform-keys
   "Recursively transforms all map keys in coll with t."
