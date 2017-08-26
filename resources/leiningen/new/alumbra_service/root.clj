@@ -2,8 +2,8 @@
     (:require [{{name}}.resolvables :as r]))
 
 (def QueryRoot
-  {:person (r/->Person nil nil nil)
-   :property (r/->Property nil nil nil nil)
+  {:person (r/->Person nil)
+   :property (r/->Property nil)
    :properties (r/->Properties nil)})
 
 (def MutationRoot
