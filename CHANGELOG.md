@@ -21,3 +21,10 @@
 - Updated project readme with better instructions.
 - Added manifold as a dependency.
 
+### 26-Aug-2017
+- Multiple minor and patch releases
+- Original project was broken as hell
+- Fixed context function
+- Updated database functions
+- Code still needs work but was cleaned up a lot
+
