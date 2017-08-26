@@ -23,6 +23,7 @@
              ["src/{{sanitized}}/root.clj" (render "root.clj" data)]
              ["src/{{sanitized}}/server.clj" (render "server.clj" data)]
              ["src/{{sanitized}}/specs.clj" (render "specs.clj" data)]
+             ["src/{{sanitized}}/utils.clj" (render "utils.clj" data)]
 
              ;; test
 
